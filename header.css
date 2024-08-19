@@ -1,0 +1,1473 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Estilização para navegadores baseados em Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+    height: 12px; /* Altura da barra de rolagem horizontal */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--branco); /* Cor de fundo da trilha da barra de rolagem */
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--verde1); /* Cor do "thumb" da barra de rolagem */
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--verde1); /* Cor do "thumb" quando o mouse está sobre ele */
+}
+
+
+
+
+/*HEADER*/
+.container_header {
+    background-image: url('assets/imagemdefundo.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay_header {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o conteúdo ao início (esquerda) */
+    justify-content: center; /* Centraliza verticalmente */
+    color: white;
+    text-align: left; /* Alinha o texto à esquerda */
+    padding-left: 20px; /* Adiciona um espaçamento à esquerda, se necessário */
+}
+
+.overlay_header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--verde4); /* Verde escuro */
+}
+
+.overlay_header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, var(--verde4), rgba(0, 0, 0, 0)); /* Degradê verde escuro para preto transparente */
+}
+
+.text_header {
+    position: relative;
+    z-index: 1;
+    font-size: 3.5rem;
+    margin: 0; /* Remove margens, se houver */
+    font-weight: 600;
+    text-wrap: wrap;
+    max-width: 35rem;
+    left: 93px;
+}
+
+.highlight {
+    color: green; /* Cor verde para a palavra "campo" */
+    font-weight: 600;
+}
+
+.buttons_header {
+    margin-top: 20px;
+    z-index: 1;
+    margin-left: 93px;
+}
+
+.btn_header {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn_header:hover {
+    background-color: #f0f0f0;
+}
+
+#saibamais {
+    color: var(--branco);
+    background-color: transparent;
+    border: 2px solid var(--branco);
+    padding: 0.6rem 2.5rem;
+    border-radius: 999rem;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+#saibamais:hover {
+    color: var(--branco);
+    background-color: var(--verde1);
+    border: 2px solid var(--verde1);
+    padding: 0.6rem 2.5rem;
+    border-radius: 999rem;
+    font-size: 1.2rem;
+}
+
+#faleconosco {
+    color: var(--branco);
+    background-color: var(--verde1);
+    border: 2px solid var(--verde1);
+    padding: 0.6rem 2.5rem;
+    border-radius: 999rem;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+#faleconosco:hover {
+    color: var(--branco);
+    background-color: transparent;
+    border: 2px solid var(--branco);
+    padding: 0.6rem 2.5rem;
+    border-radius: 999rem;
+    font-size: 1.2rem;
+}
+
+/*NAVBAR*/
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 5;
+    color: var(--branco);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Oculta inicialmente */
+    width: 250px;
+    height: 100%;
+    background-color: var(--verde2);
+    color: white;
+    transition: left 0.3s ease;
+    padding: 20px;
+    z-index: 1;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 20px 0;
+    padding: 10px; /* Adiciona algum espaçamento interno */
+    cursor: pointer;
+    transition: background-color 0.1s ease; /* Transição suave */
+}
+
+.sidebar li:hover {
+    background-color: var(--verde3); /* Fundo verde ao passar o mouse */
+}
+
+.close-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.logo {
+    position: fixed;
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    z-index: 2; /* Garante que a logo fique acima de outros elementos */
+}
+
+@media (max-width: 790px) {
+    .container_header {
+        background-image: url('assets/imagemdefundo.png'); /* Mantém a imagem de fundo */
+        background-size: cover;
+        background-position: center;
+        position: relative; /* Garante que o overlay fique corretamente posicionado */
+    }
+
+    .overlay_header::before, .overlay_header::after {
+        content: none; /* Remove os pseudo-elementos de degradê */
+    }
+
+    .container_header::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 33, 1, 0.905); /* Overlay verde com 0.5 de opacidade */
+        z-index: 0; /* Garante que o overlay fique abaixo do texto */
+    }
+
+    .text_header {
+        font-size: 2.5rem; /* Ajusta o tamanho da fonte */
+        max-width: 70%; /* Ajusta a largura máxima */
+        text-align: center; /* Centraliza o texto */
+        padding-left: 0; /* Remove o espaçamento à esquerda */
+        padding-right: 0; /* Remove o espaçamento à direita */
+    }
+
+    .buttons_header {
+        margin-left: 25%;
+        display: flex;
+        gap: 1rem;
+        text-wrap: nowrap;
+        flex-direction: row; /* Empilha os botões verticalmente */
+        align-items: center; /* Centraliza os botões */
+    }
+
+    .btn_header {
+        width: 100%; /* Faz com que os botões ocupem a largura total */
+        margin: 10px 0; /* Adiciona espaçamento entre os botões */
+    }
+
+    #faleconosco {
+        font-size: 0.9rem;
+    }
+
+    #saibamais {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        width: 120px; /* Ajusta o tamanho da logo */
+        right: 10px; /* Ajusta o posicionamento da logo */
+    }
+}
+
+@media (max-width: 700px) {
+    .buttons_header {
+        margin-left: 24%;
+    }
+}
+
+@media (max-width: 650px) {
+    .buttons_header {
+        margin-left: 23%;
+    }
+}
+
+@media (max-width: 634px) {
+    .text_header {
+        max-width: 80%;
+        margin-left: -5%;
+    }
+
+    .buttons_header {
+        margin-left: 22%;
+    }
+}
+
+@media (max-width: 560px) {
+    .text_header {
+        max-width: 80%;
+        margin-left: -7%;
+    }
+    
+    .buttons_header {
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 500px) {
+    .text_header {
+        max-width: 90%;
+        margin-left: -15%;
+    }
+}
+
+@media (max-width: 470px) {
+    .text_header {
+        max-width: 90%;
+        margin-left: -15%;
+    }
+
+    .buttons_header {
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 440px) {
+    .text_header {
+        max-width: 100%;
+        font-size: 2rem;
+        margin-left: -25%;
+    }
+
+    .buttons_header {
+        display: flex;
+        flex-direction: column;
+        margin-left: 26.5%;
+        gap: 0.2rem;
+    }
+}
+
+@media (max-width: 408px) {
+    .text_header {
+        max-width: 100%;
+        font-size: 1.7rem;
+        margin-left: -27%;
+    }
+
+    .buttons_header {
+        display: flex;
+        flex-direction: column;
+        margin-left: 24%;
+        gap: 0.2rem;
+    }
+
+    #faleconosco {
+        font-size: 0.8rem;
+    }
+
+    #saibamais {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-width: 365px) {
+    .text_header {
+        max-width: 100%;
+        font-size: 1.5rem;
+        margin-left: -35%;
+    }
+
+    .buttons_header {
+        display: flex;
+        flex-direction: column;
+        margin-left: 23%;
+        gap: 0.2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*BANNERS*/
+.carousel-container {
+    background-color: var(--verde2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.carousel {
+    display: flex;
+    width: 80%;
+    max-width: 2000px;
+    height: 350px;
+    position: relative;
+    transition: transform 0.5s ease;
+    margin-top: -15rem;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    position: relative;
+    z-index: 0;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.prev-slide,
+.next-slide {
+    background-color: transparent;
+    border: none;
+    color: var(--branco);
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 5rem;
+    margin-top: -10rem;
+}
+
+.advertise-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Faz com que o botão ocupe a largura total do contêiner */
+    position: absolute;
+    bottom: 160px; /* Ajuste a distância do fundo conforme necessário */
+}
+
+.advertise-button {
+    background-color: var(--verde1); /* Verde */
+    color: white;
+    border: 2px solid var(--verde1);
+    padding: 15px 40px;
+    border-radius: 100px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s, transform 0.3s;
+}
+
+.advertise-button:hover {
+    background-color: transparent;
+    border: 2px solid var(--branco);
+}
+
+@media (max-width: 1450px) {
+    .carousel {
+        height: 300px;
+        margin-top: -7rem;
+    }
+
+    .carousel-container {
+        height: 70vh;
+    }
+
+    .prev-slide,
+    .next-slide {
+        margin-top: -1.5rem;
+    }
+
+    .advertise-button-container {
+        bottom: 60px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .carousel {
+        height: 275px;
+        margin-top: -10rem;
+    }
+
+    .prev-slide,
+    .next-slide {
+        margin: 2rem;
+        margin-top: -8rem;
+    }
+
+    .advertise-button-container {
+        bottom: 80px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .carousel {
+        height: 225px;
+        margin-top: -10rem;
+    }
+
+    .carousel-container {
+        height: 60vh;
+    }
+
+    .prev-slide,
+    .next-slide {
+        margin: 2rem;
+        margin-top: -9rem;
+    }
+
+    .advertise-button-container {
+        bottom: 80px;
+    }
+}
+
+@media (max-width: 950px) {
+    .carousel {
+        height: 200px;
+        margin-top: -8rem;
+    }
+
+    .carousel-container {
+        height: 50vh;
+    }
+
+    .prev-slide,
+    .next-slide {
+        margin-top: -6rem;
+    }
+
+    .advertise-button-container {
+        bottom: 50px;
+    }
+}
+
+@media (max-width: 850px) {
+    .carousel {
+        height: 175px;
+        margin-top: -5rem;
+    }
+
+    .carousel-container {
+        height: 40vh;
+    }
+
+    .prev-slide,
+    .next-slide {
+        margin-top: -3rem;
+    }
+
+    .advertise-button-container {
+        bottom: 30px;
+    }
+
+    .advertise-button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .carousel {
+        height: 150px;
+    }
+}
+
+@media (max-width: 630px) {
+    .carousel {
+        height: 140px;
+    }
+
+    .prev-slide,
+    .next-slide {
+        margin: 1rem;
+        margin-top: -4rem;
+    }
+}
+
+@media (max-width: 590px) {
+    .carousel {
+        height: 130px;
+    }
+}
+
+@media (max-width: 555px) {
+    .carousel {
+        height: 120px;
+    }
+}
+
+@media (max-width: 520px) {
+    .carousel {
+        height: 110px;
+    }
+
+    .prev-slide,
+    .next-slide {
+        margin: 1rem;
+        margin-top: -4rem;
+    }
+}
+
+@media (max-width: 460px) {
+    .carousel {
+        height: 100px;
+    }
+
+    .prev-slide,
+    .next-slide {
+        margin: -0.1rem;
+        margin-top: -5rem;
+    }
+}
+
+@media (max-width: 410px) {
+    .carousel {
+        height: 90px;
+    }
+
+    .prev-slide,
+    .next-slide {
+        margin: -0.1rem;
+        margin-top: -5rem;
+    }
+}
+
+
+
+
+
+
+
+/*LOTES*/
+.lotes-titulo {
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.lotes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 200px;
+    margin-top: -5rem;
+}
+
+.lote {
+    display: flex;
+    flex-direction: column;
+}
+
+.lote-img {
+    width: 258px;
+    height: 229px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+
+.lote-txt {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.local-cidade {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.local-texto {
+    font-size: 14px;
+    text-wrap: wrap;
+}
+
+.lote-txt {
+    gap: 0.5rem;
+    background-color: var(--branco);
+    border: 2px solid #BFBFBF;
+    max-width: 258px;
+    margin-top: -1rem;
+    padding: 1rem;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+.lote-txt i {
+    color: gold;
+    margin-top: 0.7rem;
+}
+
+.local-avaliacao {
+    height: 18px;
+    display: flex;
+    flex-direction: row;
+}
+
+.local-price {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 0.9rem;
+}
+
+.lote-titulo {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.lotes-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: -7rem;
+}
+
+.highlight2 {
+    color: var(--verde1);
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+#catalogo {
+    background-color: transparent;
+    border: 2px var(--verde1) solid;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--verde1);
+    padding: 10px 45px;
+    border-radius: 100px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+#catalogo:hover {
+    background-color: var(--verde1);
+    border: 2px var(--verde1) solid;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--branco);
+}
+
+#converse {
+    background-color: var(--verde1);
+    border: 2px var(--verde1) solid;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--branco);
+    padding: 10px 25px;
+    border-radius: 100px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+#converse:hover {
+    background-color: transparent;
+    border: 2px var(--verde1) solid;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--verde1);
+}
+
+@media (max-width: 1450px) {
+    .lotes {
+        padding: 150px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .lotes {
+        padding: 100px;
+        margin-top: 1rem;
+    }
+    
+    #converse {
+        margin-top: 2rem;
+    }
+
+    #catalogo {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 1250px) {
+    .lotes {
+        padding: 50px;
+        margin-top: 2rem;
+    }
+
+    #converse {
+        margin-top: 5rem;
+    }
+
+    #catalogo {
+        margin-top: 5rem;
+    }
+}
+
+@media (max-width: 1150px) {
+    .lotes {
+        padding: 150px;
+        margin-top: -5rem;
+    }
+
+    #lote4 {
+        display: none;
+    }
+    
+    #converse {
+        margin-top: 1rem;
+    }
+
+    #catalogo {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 1090px) {
+    .lotes {
+        padding: 100px;
+        margin-top: -4rem;
+    }
+
+    #converse {
+        margin-top: 2rem;
+    }
+
+    #catalogo {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .lotes {
+        padding: 75px;
+        margin-top: -3rem;
+    }
+
+    #converse {
+        margin-top: 4rem;
+    }
+
+    #catalogo {
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .lotes {
+        padding: 50px;
+        margin-top: -1rem;
+    }
+
+    #converse {
+        margin-top: 5rem;
+    }
+
+    #catalogo {
+        margin-top: 5rem;
+    }
+}
+
+@media (max-width: 885px) {
+    .lotes {
+        padding: 25px;
+        margin-top: -1rem;
+    }
+
+    #converse {
+        margin-top: 7rem;
+    }
+
+    #catalogo {
+        margin-top: 7rem;
+    }
+}
+
+@media (max-width: 830px) {
+   .lotes {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        gap: 1rem;
+   }
+
+    .local-avaliacao {
+        height: 18px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .lotes-btn {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #converse {
+        text-align: center;
+        max-width: 50%;
+        margin-left: 25%;
+        font-size: 1rem;
+    }
+
+    #catalogo {
+        text-align: center;
+        max-width: 50%;
+        margin-left: 25%;
+        margin-bottom: -6.5rem;
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*SOBRE NÓS*/
+.curiosidades {
+    background-color: var(--verde1);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 5rem;
+}
+
+.curiosidades-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.curiosidade-img {
+    width: 350px;
+    height: auto;
+    border-radius: 20px;
+    margin-right: 50px;
+    margin-left: 15%;
+}
+
+.curiosidade-texto {
+    color: white;
+    max-width: 800px;
+}
+
+.curiosidade-texto h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.curiosidade-texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    max-width: 600px;
+}
+
+.zapzap-button {
+    display: inline-block;
+    background-color: white;
+    color: var(--verde1);
+    border: 2px solid var(--verde1);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.zapzap-button:hover {
+    background-color: var(--verde1);
+    color: white;
+    border: 2px solid white;
+}
+
+@media (max-width: 1250px) {
+    .curiosidade-img {
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 1150px) {
+    .curiosidade-img {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 850px) {
+    .curiosidades-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .curiosidade-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+    }
+
+    .curiosidades-container p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .curiosidades-container h2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    .curiosidades-container a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 250px;
+        text-align: center;
+        margin-left: 30%;
+    }
+}
+
+@media (max-width: 630px) {
+    .curiosidades-container a {
+        margin-left: 29%;
+    }
+}
+
+@media (max-width: 570px) {
+    .curiosidades-container a {
+        margin-left: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+    .curiosidades-container a {
+        margin-left: 20%;
+    }
+    
+    .curiosidade-img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 415px) {
+    .curiosidades-container a {
+        margin-left: 18%;
+    }
+}
+
+@media (max-width: 400px) {
+    .curiosidades-container a {
+        margin-left: 15%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*PATROCINADORES*/
+.patro-txt {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+.highlight3 {
+    font-weight: 600;
+    color: var(--verde1);
+}
+
+.novo-carrossel {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.novo-carrossel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin-bottom: 5rem;
+}
+
+.novo-carrossel-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.novo-carrossel-prev, .novo-carrossel-next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.novo-carrossel-prev {
+    left: 0;
+}
+
+.novo-carrossel-next {
+    right: 0;
+}
+
+@media (max-width: 415px) {
+    .patro-txt {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+/*PRE FOOTER*/
+.prefooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--verde3);
+    color: var(--branco);
+    padding: 1rem 6rem;
+    align-items: center;
+}
+
+.prefooter-icon {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 1.5rem;
+}
+
+@media (max-width: 550px) {
+    .prefooter {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 405px) {
+    .prefooter {
+        padding: 1rem 1rem;
+    }
+
+    .prefooter-icon {
+        gap: 0.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+/* Footer */
+.footer {
+    background-color: #101010;
+    display: flex;
+    flex-direction: row;
+    gap: 12rem;
+    padding: 2rem; /* Adiciona algum espaçamento interno */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+}
+
+/* Ajusta a estrutura das colunas do footer */
+.footer-cat {
+    display: flex;
+    flex-direction: column;
+    margin: 0; /* Remove margens fixas */
+    padding: 1rem; /* Adiciona algum espaçamento interno */
+    flex: 1; /* Faz com que as colunas se ajustem igualmente */
+}
+
+/* Ajusta o tamanho das fontes e o alinhamento dos textos */
+.footer-cat h2 {
+    color: var(--branco);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.25rem; /* Ajusta o tamanho da fonte */
+    margin-bottom: 1rem; /* Ajusta a margem inferior */
+}
+
+.footer-cat p {
+    color: var(--branco);
+    cursor: pointer;
+    margin-bottom: 0.5rem; /* Ajusta a margem inferior */
+    transition: all 0.3s;
+}
+
+.footer-cat p:hover {
+    color: var(--verde1);
+}
+
+.footer-cat a {
+    color: var(--branco);
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+.footer-cat a:hover {
+    color: var(--verde1);
+}
+
+.footer-cat hr {
+    margin: 1rem 0;
+    border: 0;
+    height: 2px; /* Define a espessura da linha */
+    background-color: green; /* Define a cor da linha */
+    width: 60px; /* Define a largura da linha */
+}
+
+@media (max-width: 895px) {
+    .footer {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        gap: 5rem; /* Reduz o espaçamento entre as colunas em telas menores */
+
+    }
+
+    .footer-cat {
+        margin: 0; /* Remove margens externas */
+        padding: 1rem; /* Ajusta o padding */
+    }
+
+    .footer-cat h2 {
+        font-size: 1rem; /* Ajusta o tamanho da fonte em telas menores */
+    }
+
+    .footer-cat hr {
+        margin-top: -0.2rem;
+        width: 6%; /* Define a largura da linha */
+    }
+
+    .footer-cat p {
+        font-size: 0.875rem; /* Ajusta o tamanho da fonte em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-cat hr {
+        width: 40px; /* Ajusta a largura da linha em telas menores */
+    }
+}
+
+
+
+
+
+
+
+
+/*PRIV*/
+/* Estilo da barra superior */
+.top-bar {
+    background-color: var(--verde1); /* Cor verde da barra */
+    height: 60px; /* Altura da barra */
+    display: flex;
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 0 20px; /* Adiciona um pequeno preenchimento nas laterais */
+    position: fixed; /* Fixa a barra no topo da página */
+    width: 100%; /* Garante que a barra ocupe toda a largura da página */
+    top: 0; /* Posiciona a barra no topo */
+    z-index: 1000; /* Garante que a barra esteja acima de outros conteúdos */
+}
+
+.logo-top-bar {
+    max-height: 40px; /* Ajuste a altura da logo conforme necessário */
+}
+
+/* Estilo da página de política de privacidade */
+.privacy-container {
+    margin: 80px auto; /* Adiciona espaço acima da barra e centraliza o conteúdo */
+    padding: 40px;
+    max-width: 800px; /* Define a largura máxima do conteúdo */
+    background-color: #f9f9f9;
+}
+
+.privacy-container h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.privacy-container h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.privacy-container p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.privacy-container a {
+    color: var(--verde1); /* Cor verde para links */
+    text-decoration: none;
+}
+
+.privacy-container a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do rodapé */
+.footer {
+    background-color: #101010;
+    display: flex;
+    flex-direction: row;
+    gap: 12rem;
+    padding: 20px;
+}
+
+.footer-cat {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    text-wrap: wrap;
+}
+
+.footer-cat h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.footer-cat p {
+    color: #ffffff;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: all 0.1s;
+}
+
+.footer-cat p:hover {
+    color: var(--verde1);
+}
+
+.footer-cat hr {
+    margin: 1rem 0;
+    border: 0;
+    height: 2px; /* Define a espessura da linha */
+    width: 60px; /* Define a largura da linha */
+}
+
+
+
+
+
+
+
+
+
+
+
+/*TERMOS*/
+/* Estilização geral da página de termos de uso */
+.terms {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    color: #333;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+}
+
+.terms h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.terms h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.terms p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #101010;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.top-bar {
+    background-color: var(--verde1); /* Cor verde da barra */
+    height: 60px; /* Altura da barra */
+    display: flex;
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 0 20px; /* Adiciona um pequeno preenchimento nas laterais */
+    position: fixed; /* Fixa a barra no topo da página */
+    width: 100%; /* Garante que a barra ocupe toda a largura da página */
+    top: 0; /* Posiciona a barra no topo */
+    z-index: 1000; /* Garante que a barra esteja acima de outros conteúdos */
+}
+
+.logo-top-bar {
+    max-height: 40px; /* Ajuste a altura da logo conforme necessário */
+}

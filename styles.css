@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --verde1: #0AA022;
+    --verde2: #075213;
+    --verde3: #0A3E12;
+    --verde4: #07280C;
+    --branco: #ffffff;
+    --preto:  #000000;
+}

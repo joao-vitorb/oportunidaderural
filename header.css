@@ -1276,8 +1276,6 @@ html {
 @media (max-width: 768px) {
     .footer {
         flex-direction: column;
-        gap: 5rem; /* Reduz o espaçamento entre as colunas em telas menores */
-
     }
 
     .footer-cat {
@@ -1313,29 +1311,29 @@ html {
 
 
 /*PRIV*/
-/* Estilo da barra superior */
+
 .top-bar {
-    background-color: var(--verde1); /* Cor verde da barra */
-    height: 60px; /* Altura da barra */
+    background-color: var(--verde1);
+    height: 60px; 
     display: flex;
-    align-items: center; /* Alinha verticalmente o conteúdo */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    padding: 0 20px; /* Adiciona um pequeno preenchimento nas laterais */
-    position: fixed; /* Fixa a barra no topo da página */
-    width: 100%; /* Garante que a barra ocupe toda a largura da página */
-    top: 0; /* Posiciona a barra no topo */
-    z-index: 1000; /* Garante que a barra esteja acima de outros conteúdos */
+    align-items: center;
+    justify-content: center; 
+    padding: 0 20px; 
+    position: fixed; 
+    width: 100%;
+    top: 0; 
+    z-index: 1000; 
 }
 
 .logo-top-bar {
-    max-height: 40px; /* Ajuste a altura da logo conforme necessário */
+    max-height: 40px;
 }
 
-/* Estilo da página de política de privacidade */
+
 .privacy-container {
-    margin: 80px auto; /* Adiciona espaço acima da barra e centraliza o conteúdo */
+    margin: 80px auto;
     padding: 40px;
-    max-width: 800px; /* Define a largura máxima do conteúdo */
+    max-width: 800px;
     background-color: #f9f9f9;
 }
 
@@ -1358,7 +1356,7 @@ html {
 }
 
 .privacy-container a {
-    color: var(--verde1); /* Cor verde para links */
+    color: var(--verde1); 
     text-decoration: none;
 }
 
@@ -1366,7 +1364,7 @@ html {
     text-decoration: underline;
 }
 
-/* Estilo do rodapé */
+
 .footer {
     background-color: #101010;
     display: flex;
@@ -1403,8 +1401,8 @@ html {
 .footer-cat hr {
     margin: 1rem 0;
     border: 0;
-    height: 2px; /* Define a espessura da linha */
-    width: 60px; /* Define a largura da linha */
+    height: 2px; 
+    width: 60px; 
 }
 
 
@@ -1418,7 +1416,7 @@ html {
 
 
 /*TERMOS*/
-/* Estilização geral da página de termos de uso */
+
 .terms {
     max-width: 800px;
     margin: 0 auto;
@@ -1456,18 +1454,18 @@ footer {
 }
 
 .top-bar {
-    background-color: var(--verde1); /* Cor verde da barra */
-    height: 60px; /* Altura da barra */
+    background-color: var(--verde1);
+    height: 60px; 
     display: flex;
-    align-items: center; /* Alinha verticalmente o conteúdo */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    padding: 0 20px; /* Adiciona um pequeno preenchimento nas laterais */
-    position: fixed; /* Fixa a barra no topo da página */
-    width: 100%; /* Garante que a barra ocupe toda a largura da página */
-    top: 0; /* Posiciona a barra no topo */
-    z-index: 1000; /* Garante que a barra esteja acima de outros conteúdos */
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
 }
 
 .logo-top-bar {
-    max-height: 40px; /* Ajuste a altura da logo conforme necessário */
+    max-height: 40px;
 }

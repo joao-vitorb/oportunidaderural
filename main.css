@@ -666,9 +666,15 @@ html {
 
 .lote-img {
     width: 258px;
-    height: 229px;
+    height: 170px;
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
+    transition: all 0.3s;
+}
+
+.lote-img:hover {
+    border: solid 4px var(--verde1);
+    transition: all 0.3s;
 }
 
 .lote-txt {
@@ -930,15 +936,6 @@ html {
     }
 }
 
-
-
-
-
-
-
-
-
-/*SOBRE NÓS*/
 .curiosidades {
     background-color: var(--verde1);
     padding: 40px 20px;
@@ -958,6 +955,8 @@ html {
 }
 
 .curiosidade-img {
+    background-color: var(--branco);
+    padding: 4rem;
     width: 350px;
     height: auto;
     border-radius: 20px;
@@ -1158,13 +1157,6 @@ html {
     }
 }
 
-
-
-
-
-
-
-/*PRE FOOTER*/
 .prefooter {
     display: flex;
     flex-direction: row;
@@ -1197,52 +1189,35 @@ html {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*FOOTER*/
-/* Footer */
 .footer {
     background-color: #101010;
     display: flex;
     flex-direction: row;
     gap: 12rem;
-    padding: 2rem; /* Adiciona algum espaçamento interno */
-    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+    padding: 2rem;
+    flex-wrap: wrap; 
 }
 
-/* Ajusta a estrutura das colunas do footer */
 .footer-cat {
     display: flex;
     flex-direction: column;
-    margin: 0; /* Remove margens fixas */
-    padding: 1rem; /* Adiciona algum espaçamento interno */
-    flex: 1; /* Faz com que as colunas se ajustem igualmente */
+    margin: 0; 
+    padding: 1rem; 
+    flex: 1; 
 }
 
-/* Ajusta o tamanho das fontes e o alinhamento dos textos */
 .footer-cat h2 {
     color: var(--branco);
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1.25rem; /* Ajusta o tamanho da fonte */
-    margin-bottom: 1rem; /* Ajusta a margem inferior */
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 .footer-cat p {
     color: var(--branco);
     cursor: pointer;
-    margin-bottom: 0.5rem; /* Ajusta a margem inferior */
+    margin-bottom: 0.5rem;
     transition: all 0.3s;
 }
 
@@ -1252,7 +1227,7 @@ html {
 
 .footer-cat a {
     color: var(--branco);
-    text-decoration: none; /* Remove o sublinhado padrão */
+    text-decoration: none; 
 }
 
 .footer-cat a:hover {
@@ -1262,9 +1237,9 @@ html {
 .footer-cat hr {
     margin: 1rem 0;
     border: 0;
-    height: 2px; /* Define a espessura da linha */
-    background-color: green; /* Define a cor da linha */
-    width: 60px; /* Define a largura da linha */
+    height: 2px; 
+    background-color: green;
+    width: 60px;
 }
 
 @media (max-width: 895px) {
@@ -1279,39 +1254,32 @@ html {
     }
 
     .footer-cat {
-        margin: 0; /* Remove margens externas */
-        padding: 1rem; /* Ajusta o padding */
+        margin: 0;
+        padding: 1rem;
     }
 
     .footer-cat h2 {
-        font-size: 1rem; /* Ajusta o tamanho da fonte em telas menores */
+        font-size: 1rem; 
     }
 
     .footer-cat hr {
         margin-top: -0.2rem;
-        width: 6%; /* Define a largura da linha */
+        width: 6%;
     }
 
     .footer-cat p {
-        font-size: 0.875rem; /* Ajusta o tamanho da fonte em telas menores */
+        font-size: 0.875rem;
     }
 }
 
 @media (max-width: 480px) {
     .footer-cat hr {
-        width: 40px; /* Ajusta a largura da linha em telas menores */
+        width: 40px;
     }
 }
 
 
-
-
-
-
-
-
 /*PRIV*/
-
 .top-bar {
     background-color: var(--verde1);
     height: 60px; 
@@ -1406,17 +1374,7 @@ html {
 }
 
 
-
-
-
-
-
-
-
-
-
 /*TERMOS*/
-
 .terms {
     max-width: 800px;
     margin: 0 auto;

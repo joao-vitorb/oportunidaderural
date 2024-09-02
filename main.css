@@ -372,17 +372,6 @@ html {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-/*BANNERS*/
 .carousel-container {
     background-color: var(--verde2);
     display: flex;
@@ -636,13 +625,6 @@ html {
     }
 }
 
-
-
-
-
-
-
-/*LOTES*/
 .lotes-titulo {
     font-weight: 600;
     display: flex;
@@ -920,6 +902,10 @@ html {
         flex-direction: column;
     }
 
+    .lotes-titulo {
+        font-size: 24px;
+    }
+
     #converse {
         text-align: center;
         max-width: 50%;
@@ -933,6 +919,17 @@ html {
         margin-left: 25%;
         margin-bottom: -6.5rem;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .lotes-btn {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lotes-titulo {
+        font-size: 22px;
     }
 }
 

@@ -24,7 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 A Oportunidade Rural é uma empresa dedicada à venda e leilão de lotes e gados.
 
-- [Acesse o projeto finalizado, online](https://joao-vitorb.github.io/oportunidaderural)
+- [Acesse o projeto finalizado, online](https://oportunidaderural.com.br/)
 
 ## :memo: Licença
 
